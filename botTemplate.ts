@@ -49,9 +49,9 @@ client.on('ready', () => {
 client.on('qr', qr => {
     qrcode.generate(qr, {small: true});
 });
-client.on('message_create', async (m) => {
-    if(m.body.toLowerCase()==='hi'){
-        m.reply("HOLAAAAAAAAAAAAAAAAAAAAA")
+client.on('message_create', async (m) => { // cuando te llega el mensaje
+    if(m.body.toLowerCase()==='hi'){ //si el texto del mensaje en minusculas es hi
+        m.reply("HOLAAAAAAAAAAAAAAAAAAAAA") //responder HOLAAAAAAAAAAAAAAAA
     }
 })
 console.clear()
